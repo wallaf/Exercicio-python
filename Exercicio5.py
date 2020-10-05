@@ -1,19 +1,19 @@
-menor_q_160 = entre_160_e_180 = maior_q_180 = 0
+#5.    Crie um programa que leia a altura de 10 pessoas. Ao final o programa deve informar o total de pessoas cadastradas,
+# a quantidade de pessoas com altura inferior a 1,60 metros; a quantidade de pessoas com altura entre 1,60 metros
+# e 1,80 metros e a quantidade de pessoas com altura superior a 1,80 metros.
 
-for cont in range(10):
-    altura = float(input('Digite sua altura: '))
+menor160 = maior180 = entre160e180 = 0
+
+for calc in range(10):
+    altura = float(input(f'Digite a altura da {calc + 1}º pessoa: '))
 
     if altura < 1.60:
-        menor_q_160 =+ 1
-
-    elif 1.60 < altura < 1.80:
-        entre_160_e_180 =+ 1
-
+        menor160 += 1
     elif altura > 1.80:
-        maior_q_180 =+ 1
+        maior180 += 1
+    elif 1.60 < altura < 1.80:
+        entre160e180 += 1
 
-print("--------------------------------------------")
-print("Menores que 1.60m:",menor_q_160)
-print("Entre 1.60me 1.80m:",entre_160_e_180)
-print("Maiores que 1.80m:",maior_q_180)
-print("--------------------------------------------")
+print(f'Menores ou iguais a 1.60 foram {menor160}')
+print(f'Maiores ou iguais a 1.80 foram {maior180}')
+print(f'Entre 1.60 e 1.80 foram {entre160e180}')
